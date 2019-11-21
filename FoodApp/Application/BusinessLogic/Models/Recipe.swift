@@ -15,7 +15,7 @@ struct Recipe: Codable {
     var totalCalories: Int
     var image: Data
     var isVegetarian: Bool {
-        return ingredients.contains { $0.isVegetarian == true }
+        return !ingredients.contains { $0.isVegetarian == false }
     }
 }
 

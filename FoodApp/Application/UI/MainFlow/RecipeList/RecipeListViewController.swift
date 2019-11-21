@@ -61,6 +61,7 @@ extension RecipeListViewController: BindableType {
         bindDataSource()
         bindDeleted()
         bindMoved()
+        bindSelected()
         bindNavigationBar()
     }
     
@@ -85,6 +86,18 @@ extension RecipeListViewController: BindableType {
                 guard source != destination else { return }
                 let item = self.viewModel.dataSource.value[source.row]
                 self.viewModel.dataSource.replaceElement(at: source.row, insertTo: destination.row, with: item)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindSelected() {
+        tableView.rx.modelSelected(Recipe.self)
+            .asDriver()
+            .drive(onNext: { [unowned self] recipe in
+                var vc = RecipeViewController.initFromNib()
+                vc.bind(to: RecipeViewModel(withRecipe: recipe))
+                
+                self.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disposeBag)
     }

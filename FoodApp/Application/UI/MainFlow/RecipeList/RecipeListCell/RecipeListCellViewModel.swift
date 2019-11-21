@@ -17,9 +17,9 @@ class RecipeListCellViewModel: DisposableViewModel {
     var imageData: Driver<Data>
     
     init(withRecipe recipe: Recipe) {
-        name = Driver.just(recipe.name)
-        calories = Driver.just("Total calories: \(recipe.totalCalories)")
-        isVegetarian = Driver.just(recipe.isVegetarian)
-        imageData = Driver.just(recipe.image)
+        name = .just(recipe.name)
+        calories = .just("Total calories: \(recipe.totalCalories)")
+        isVegetarian = .just(recipe.isVegetarian)
+        imageData = .just(recipe.image)
     }
 }
