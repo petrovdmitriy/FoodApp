@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5oh-tR-Fpd">
-                        <rect key="frame" x="15" y="10" width="364" height="140"/>
+                        <rect key="frame" x="15" y="10" width="364" height="120"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chickenPasta" translatesAutoresizingMaskIntoConstraints="NO" id="BVU-df-iQM">
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -53,7 +53,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="oZg-85-tmh" firstAttribute="height" secondItem="BVU-df-iQM" secondAttribute="height" id="97H-6z-QF4"/>
-                            <constraint firstAttribute="height" constant="140" id="MZm-Nc-t36"/>
+                            <constraint firstAttribute="height" constant="120" id="MZm-Nc-t36"/>
                         </constraints>
                     </stackView>
                 </subviews>
