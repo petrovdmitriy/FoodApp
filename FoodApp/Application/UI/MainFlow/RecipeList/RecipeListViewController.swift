@@ -24,6 +24,8 @@ class RecipeListViewController: DisposableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "My recipes"
+        
         setupTableView()
         setupNavigationBar()
     }
