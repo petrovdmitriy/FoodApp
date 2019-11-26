@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="IngredientCollectionViewCell" customModule="FoodApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTR-ur-4Wt">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggPorkRice" translatesAutoresizingMaskIntoConstraints="NO" id="nMD-QK-0lX">
+                                <rect key="frame" x="10" y="10" width="130" height="130"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nMD-QK-0lX" firstAttribute="top" secondItem="cTR-ur-4Wt" secondAttribute="top" constant="10" id="94u-vC-uYe"/>
+                            <constraint firstAttribute="bottom" secondItem="nMD-QK-0lX" secondAttribute="bottom" constant="10" id="D83-Yd-vDy"/>
+                            <constraint firstItem="nMD-QK-0lX" firstAttribute="leading" secondItem="cTR-ur-4Wt" secondAttribute="leading" constant="10" id="fJs-4g-8Yy"/>
+                            <constraint firstAttribute="trailing" secondItem="nMD-QK-0lX" secondAttribute="trailing" constant="10" id="vEk-fp-f2u"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cTR-ur-4Wt" secondAttribute="bottom" id="A3F-ba-YE3"/>
+                <constraint firstAttribute="trailing" secondItem="cTR-ur-4Wt" secondAttribute="trailing" id="ElC-rt-jGt"/>
+                <constraint firstItem="cTR-ur-4Wt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Pj9-6V-4AO"/>
+                <constraint firstItem="cTR-ur-4Wt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="e51-Pj-dja"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="100" height="153"/>
+            <connections>
+                <outlet property="ingredientImage" destination="nMD-QK-0lX" id="YSY-RP-ptX"/>
+            </connections>
+            <point key="canvasLocation" x="-26.086956521739133" y="117.52232142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="eggPorkRice" width="600" height="840"/>
+    </resources>
+</document>
